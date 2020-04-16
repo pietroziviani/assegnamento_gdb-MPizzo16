@@ -1,8 +1,8 @@
 echo
-echo "--- Test: vettore con meno di 10 elementi" 
+echo "--- Test: vettore con più di 10 elementi" 
 
-output=$(./codice 3 7 4 9 5 2 6 1)
-expected_output="1 2 3 4 5 6 7 9 "
+output=$(./codice 3 7 4 9 5 2 6 1 8 10 11 )
+expected_output="Numero massimo di input 10"
 
 if [ "$output" == "$expected_output" ] ; then
   echo "Passato: Output corretto"

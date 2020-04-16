@@ -1,8 +1,8 @@
 echo
-echo "--- Test: vettore con meno di 10 elementi" 
+echo "--- Test: vettore vuoto"
 
-output=$(./codice 3 7 4 9 5 2 6 1)
-expected_output="1 2 3 4 5 6 7 9 "
+output=$(./codice)
+expected_output=""
 
 if [ "$output" == "$expected_output" ] ; then
   echo "Passato: Output corretto"
