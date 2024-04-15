@@ -10,7 +10,7 @@
 
 void estrai_dati(int ac, char **av, int *vett, int *lung)
 {
-	*lung = ac;
+	*lung = ac - 1;
 
 	for (int i = 0; i < *lung; ++i)
 		vett[i] = atoi(av[i+1]);
@@ -18,7 +18,7 @@ void estrai_dati(int ac, char **av, int *vett, int *lung)
 
 void fai_spazio(int posizione, int *vett, int lung)
 {
-	for (int j = lung; j > posizione; ++j)
+	for (int j = lung; j > posizione; --j)
 		vett[j] = vett[j-1];
 }
 
