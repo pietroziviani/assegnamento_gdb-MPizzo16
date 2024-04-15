@@ -10,7 +10,7 @@
 
 void estrai_dati(int ac, char **av, int *vett, int *lung)
 {
-	*lung = ac - 1;
+	*lung = ac;
 
 	for (int i = 0; i < *lung; ++i)
 		vett[i] = atoi(av[i+1]);
@@ -18,7 +18,7 @@ void estrai_dati(int ac, char **av, int *vett, int *lung)
 
 void fai_spazio(int posizione, int *vett, int lung)
 {
-	for (int j = lung - 1; j > posizione; ++j) 
+	for (int j = lung; j > posizione; ++j)
 		vett[j] = vett[j-1];
 }
 
@@ -44,7 +44,7 @@ void ordina_dati(const int *dati_non_ordinati, int *dati_ordinati)
 {
 	int num_dati = sizeof(dati_non_ordinati) / sizeof(dati_non_ordinati[0]);
 	for (int i = 0; i < num_dati; ++i)
-		inserisci(dati_non_ordinati[i], i, dati_ordinati);
+		inserisci(dati_non_ordinati[i], i, *dati_ordinati);
 }
 
 void stampa_vettore(const int *vett, int lung)
